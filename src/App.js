@@ -9,6 +9,7 @@ function App() {
   let [data,setProduct] = useState("");
   return (
     <div className="App">
+        <p>Hello World</p>
         <input type="text" placeholder="Masukan Kata" onChange={handleChange}/>
         <br/>
         <Show product={data}></Show>
