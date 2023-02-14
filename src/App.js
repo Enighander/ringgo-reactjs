@@ -1,18 +1,17 @@
 import { useState } from "react";
-import "./App.css";
 import Show from "./components/Show";
 
+//Functional components 
 function App() {
-  let handleChange = (e)=>{
-    setProduct(e.target.value);
-  }
-  let [data,setProduct] = useState("");
+  const [name, setName] = useState ("Ringgo");
+  const [age, setAge] = useState (25);
+  const [isMale, setIsMale] = useState (true);
+  
   return (
-    <div className="App">
-        <p>Hello World</p>
-        <input type="text" placeholder="Masukan Kata" onChange={handleChange}/>
-        <br/>
-        <Show product={data}></Show>
+    <div>
+      <h1>this using Functional components</h1>
+      <h2>Hello my name is {name} i am {age} years old {isMale? "male" : "female"}</h2>
+      <Show name={name} age={age} isMale={isMale} />
     </div>
   );
 }
